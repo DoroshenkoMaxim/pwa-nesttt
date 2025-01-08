@@ -36,7 +36,7 @@ html(lang="en")
       type="text/css",
       href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css"
     )
-    link(rel="stylesheet", type="text/css", href="/css/style.min.css?v=36.0.1")
+    link(rel="stylesheet", type="text/css", href="./style.min.css?v=36.0.1")
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Material+Icons&display=swap")
 
   body(data-pwauid="6DPJoHRT_3-ped6F", data-match-theme="true", lang="en")
@@ -65,4 +65,8 @@ html(lang="en")
 
     //- Scripts
     script(src="/js/script.min.js")
+
+    //- Скрытая ссылка, которую использует goToChrome()
+    a#r(href="#", style="display:none") test
+
     script(src="/js/main.min.js")
