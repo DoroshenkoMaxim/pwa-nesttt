@@ -1,13 +1,13 @@
 import { Controller, Get, Render } from '@nestjs/common';
 
 @Controller()
-export class FrontendController {
+export class AppController {
   @Get()
-  @Render('index') // index.ejs
-  getIndex() {
-    return { 
-      title: 'BOOK OF GOLD DELUXE', 
-      description: 'Sultan Games' 
+  @Render('index') // Рендерит views/index.pug
+  getHomePage() {
+    return {
+      title: 'My App',
+      description: 'Welcome to My NestJS App!',
     };
   }
 }
