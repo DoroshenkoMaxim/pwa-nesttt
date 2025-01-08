@@ -4,12 +4,8 @@ import { join } from 'path';
 
 @Module({
   imports: [
-    // Добавляем модуль для раздачи статики
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
-      // опционально:
-      // serveRoot: '/',
-      // exclude: ['/api*'],
     }),
   ],
 })
