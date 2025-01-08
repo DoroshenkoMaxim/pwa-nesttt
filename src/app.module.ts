@@ -2,8 +2,6 @@
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { FallbackController } from './fallback.controller';
-
 @Module({
   imports: [
     ServeStaticModule.forRoot({
@@ -11,7 +9,7 @@ import { FallbackController } from './fallback.controller';
       serveRoot: '/',
     }),
   ],
-  controllers: [FallbackController],
+  controllers: [],
   providers: [],
 })
 export class AppModule {}
