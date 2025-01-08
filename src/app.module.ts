@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { FrontendController } from './frontend.controller';
+import { AppController } from './frontend.controller';
 
 @Module({
   imports: [
@@ -9,6 +9,6 @@ import { FrontendController } from './frontend.controller';
       rootPath: join(__dirname, '..', 'public'), // Укажите путь к HTML-файлам
     }),
   ],
-  controllers: [FrontendController],
+  controllers: [AppController],
 })
 export class AppModule {}
