@@ -1,13 +1,10 @@
 import { Controller, Get, Render } from '@nestjs/common';
 
-@Controller()
+@Controller() // Базовый маршрут
 export class AppController {
-  @Get()
+  @Get() // Обрабатывает GET-запросы на корневом маршруте "/"
   @Render('index') // Рендерит views/index.pug
   getHomePage() {
-    return {
-      title: 'My App',
-      description: 'Welcome to My NestJS App!',
-    };
+    // Пустое тело метода, так как данные не передаются
   }
 }
