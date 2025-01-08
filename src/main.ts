@@ -12,8 +12,12 @@ async function bootstrap() {
   // Указываем Pug в качестве шаблонного движка
   app.setViewEngine('pug');
 
-  // Указываем папку для статических файлов
-  app.useStaticAssets(join(__dirname, '..', 'public'));
+  // Указываем папку для статических файлов с кастомными заголовками
+  app.useStaticAssets(join(__dirname, '..', 'public'), {
+    setHeaders: (res) => {
+      res.setHeader('Cache-Control', 'max-age=31536000, immutable');
+    },
+  });
 
   await app.listen(3000);
 }
