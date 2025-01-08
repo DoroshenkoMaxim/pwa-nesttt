@@ -7,9 +7,7 @@ import { AppController } from './app.controller';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
-      serveRoot: '/', // По умолчанию '/'
-      // exclude: ['/api*'], // Если у вас есть маршруты API
+      rootPath: join(__dirname, '..', 'public')
     }),
   ],
   controllers: [AppController],
