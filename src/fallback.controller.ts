@@ -1,11 +1,13 @@
-import { Controller, Get, Res } from '@nestjs/common';
-import { Response } from 'express';
-import { join } from 'path';
+import { Controller, Get, Render } from '@nestjs/common';
 
 @Controller()
-export class FallbackController {
-  @Get('*')
-  fallback(@Res() res: Response) {
-    res.sendFile('index.html', { root: join(__dirname, '..', 'public') });
+export class FrontendController {
+  @Get()
+  @Render('index') // index.ejs
+  getIndex() {
+    return { 
+      title: 'BOOK OF GOLD DELUXE', 
+      description: 'Sultan Games' 
+    };
   }
 }
