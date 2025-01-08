@@ -6,7 +6,10 @@ import { join } from 'path';
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
+      serveRoot: '/',
     }),
   ],
+  controllers: [],
+  providers: [],
 })
 export class AppModule { }
