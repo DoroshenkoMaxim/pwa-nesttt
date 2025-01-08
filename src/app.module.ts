@@ -2,7 +2,7 @@
 import { Module } from '@nestjs/common';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { AppController } from './app.controller';
+import { FallbackController } from './app.controller';
 
 @Module({
   imports: [
@@ -10,7 +10,7 @@ import { AppController } from './app.controller';
       rootPath: join(__dirname, '..', 'public')
     }),
   ],
-  controllers: [AppController],
+  controllers: [FallbackController],
   providers: [],
 })
 export class AppModule {}
