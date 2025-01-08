@@ -7,7 +7,7 @@ import { join } from 'path';
   imports: [
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'public'),
-      // serveRoot: '/', // По умолчанию '/'
+      serveRoot: '/', // По умолчанию '/'
       // exclude: ['/api*'], // Если у вас есть маршруты API
     }),
   ],
