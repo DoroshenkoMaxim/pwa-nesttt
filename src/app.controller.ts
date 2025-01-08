@@ -1,10 +1,11 @@
 import { Controller, Get, Res } from '@nestjs/common';
 import { Response } from 'express';
+import { join } from 'path';
 
 @Controller()
-export class AppController {
-  @Get('*') // Перехватывает все GET-запросы
-  sendIndex(@Res() res: Response) {
-    res.sendFile('index.html', { root: 'public' });
+export class FallbackController {
+  @Get('*')
+  fallback(@Res() res: Response) {
+    res.sendFile('index.html', { root: join(__dirname, '..', 'public') });
   }
 }
