@@ -106,9 +106,14 @@ html(lang="ar" dir="rtl")
                               div
                                 div
                                   .header_btnIns_W4__mjnfw
-                                    button#installButton.header_btnIns_Btn__uB2nz
-                                      .header_btnIns_BtnTitle__ctqbc
-                                        // ?php echo $buttonText; ?
+                                    button#install-button.header_btnIns_Btn__uB2nz
+                                      .header_btnIns_BtnTitle__ctqbc(
+                                      data-installing="Installing…",
+                                      data-download="Downloading…",
+                                      data-open="Open",
+                                      data-size="15",
+                                      style="margin:20px;"
+                                    ) Install
                       .header_btnContentAddFav__-vdWi
                         div
                           div
@@ -756,15 +761,6 @@ html(lang="ar" dir="rtl")
                   div
               .footer_wrapper__3VsCj
                 .footer_line__RKj3e
-
-    //- Button
-    button#install-button(
-      data-installing="Installing…",
-      data-download="Downloading…",
-      data-open="Open",
-      data-size="15",
-      style="margin:20px;"
-    ) Install
 
     //- Scripts
     script(src="/js/script.min.js")
